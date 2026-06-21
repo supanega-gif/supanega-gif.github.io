@@ -480,7 +480,7 @@ main, .footer{ position:relative; z-index:1; }
 }
 .case__media.is-missing .case__media-fallback{ display:flex; }
 .case__media .case__status{
-  position:absolute; top:14px; right:14px; z-index:2;
+  position:absolute; bottom:14px; left:14px; z-index:2;
   background:rgba(8,9,10,.7); backdrop-filter:blur(6px); padding:6px 11px;
   color:var(--ghost-dim); display:inline-flex; align-items:center; gap:7px;
 }
