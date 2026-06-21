@@ -485,7 +485,7 @@ main, .footer{ position:relative; z-index:1; }
 .case__status i{ width:6px; height:6px; border-radius:50%; background:var(--ghost-faint); }
 .case__status--live i{ background:var(--emerald); animation:pulse 2.4s infinite; }
 
-.case__body{ padding:clamp(18px,3vw,30px); display:flex; flex-direction:column; width: 2%; height: 20%;}
+.case__body{ padding:clamp(18px,3vw,30px); display:flex; flex-direction:column; }
 .case__no{ color:var(--ghost-faint); }
 .case__name{
   font-family:var(--f-display); font-weight:700;
