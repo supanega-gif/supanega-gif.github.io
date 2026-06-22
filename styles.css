@@ -500,16 +500,26 @@ main, .footer{ position:relative; z-index:1; }
 .case__media .case__status {
   position: absolute !important;
   top: 12px !important;
-  left: 12px !important; /* Locked to top-left to stay away from the logos */
+  left: 12px !important;
   z-index: 10 !important;
   background: rgba(8,9,10,.8) !important;
   backdrop-filter: blur(6px) !important;
   padding: 4px 8px !important;
   font-size: 0.75rem !important;
   border-radius: 4px !important;
-  margin: 0 !important; /* Stops it from dropping down into the middle */
+  margin: 0 !important;
+  display: inline-flex !important; 
+  align-items: center !important; 
+  gap: 6px !important; 
 }
-.case__status i{ width:6px; height:6px; border-radius:50%; background:var(--ghost-faint); }
+.case__status i { 
+  display: block !important; /* Forces the browser to respect the 6px height/width */
+  width: 6px !important; 
+  height: 6px !important; 
+  border-radius: 50% !important; 
+  background: var(--ghost-faint) !important; 
+  flex-shrink: 0 !important; /* Stops flexbox from squishing the dot into an oval */
+}
 .case__status--live i{ background:var(--emerald); animation:pulse 2.4s infinite; }
 
 .case__body{ padding:18px; display:flex; flex-direction:column; }
