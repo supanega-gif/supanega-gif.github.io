@@ -455,7 +455,7 @@ main, .footer{ position:relative; z-index:1; }
 .member.is-open .member__meta{ transform:none; }
 
 /* ---------- The Vault (case studies) ---------- */
-.vault__list{ display:grid; grid-template-columns:repeat(4,1fr) !important; gap:14px; }
+.vault__list{ display:grid; grid-template-columns:repeat(3,1fr) !important; gap:14px; }
 .case{
   border:1px solid var(--line); background:var(--onyx-2); position:relative;
   display:flex; flex-direction:column; overflow:hidden;
