@@ -470,7 +470,7 @@ main, .footer{ position:relative; z-index:1; }
 .case__media {
   position: relative !important;
   width: 100% !important;
-  height: 160px !important; 
+  height: 220px !important; 
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -520,7 +520,7 @@ main, .footer{ position:relative; z-index:1; }
 }
 .case__status--live i{ background:var(--emerald) !important; animation:pulse 2.4s infinite !important; }
 
-.case__body{ padding:18px; display:flex; flex-direction:column; }
+.case__body{ padding:24px 16px; display:flex; flex-direction:column; }
 .case__no{ color:var(--ghost-faint); }
 .case__name{
   font-family:var(--f-display); font-weight:700;
@@ -741,3 +741,16 @@ main, .footer{ position:relative; z-index:1; }
   .cursor-dot, .cursor-ring{ display:none; }
   body.cursor-active{ cursor:auto; }
 }
+
+@media (max-width: 1024px) {
+  .vault__list {
+    grid-template-columns: repeat(2, 1fr) !important; /* Drops from 4 to 2 columns */
+  }
+}
+
+@media (max-width: 600px) {
+  .vault__list {
+    grid-template-columns: 1fr !important; /* Stacks the cards in a single vertical column */
+  }
+
+
