@@ -520,7 +520,7 @@ main, .footer{ position:relative; z-index:1; }
   background: var(--ghost-faint) !important; 
   flex-shrink: 0 !important; /* Stops flexbox from squishing the dot into an oval */
 }
-.case__status--live i{ background:var(--emerald); animation:pulse 2.4s infinite; }
+.case__status--live i{ background:var(--emerald) !important; animation:pulse 2.4s infinite !important; }
 
 .case__body{ padding:18px; display:flex; flex-direction:column; }
 .case__no{ color:var(--ghost-faint); }
