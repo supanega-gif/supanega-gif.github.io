@@ -67,11 +67,11 @@ body::after{
   transition:width .25s var(--ease), height .25s var(--ease), background .25s;
 }
 .cursor-ring{
-  width: 30px; height:30px; border:1px solid rgba(239,242,240,.7);
+  width: 20px; height:20px; border:1px solid rgba(239,242,240,.7);
   transition:width .3s var(--ease), height .3s var(--ease),
              border-color .3s, background .3s;
 }
-.cursor-ring.is-hover{ width:64px; height:64px; border-color:var(--emerald-lit); }
+.cursor-ring.is-hover{ width:54px; height:54px; border-color:var(--emerald-lit); }
 .cursor-dot.is-hover{ width:5px; height:5px; }
 .cursor-ring.is-view{
   width:84px; height:84px; border-color:transparent;
