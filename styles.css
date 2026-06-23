@@ -96,36 +96,64 @@ body.cursor-active a, body.cursor-active button, body.cursor-active [data-cursor
 }
 
 /* ---------- Loader / intro sequence ---------- */
+
 .loader{
+
   position:fixed; inset:0; z-index:10001; background:var(--onyx);
-  transition:opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0.6s;
+
+  transition:opacity .5s ease, visibility .5s;
+
 }
+
 .loader.is-done{ opacity:0; visibility:hidden; }
+
 .loader__lockup{
-  position:absolute; display:flex; align-items:center; will-change:transform;
-   transform: translate(-50%, -50%);
-  left:50%; top:50%;
+
+  position:absolute; display:flex; align-items:center; will-change:left, top;
+
+  left:calc(50% - 40px); top:calc(50% - 40px);
+
 }
-.loader__mark{ flex:none; display:block; color:var(--emerald); width:80px; height:80px; animation: spin 2s linear infinite; }
+
+.loader__mark{ flex:none; display:block; color:var(--emerald); width:80px; height:80px; }
+
 .loader__mark .emblem-img, .loader__mark .emblem-svg{ display:block; width:100%; height:100%; object-fit:contain; }
+
 .loader__word{
+
   font-family:var(--f-display); font-weight:700; letter-spacing:.12em; color:var(--ghost);
-  white-space:nowrap; overflow:hidden; clip-path: inset(0 100% 0 0); opacity:0; transition: clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+
+  white-space:nowrap; overflow:hidden; width:0; opacity:0;
+
 }
+
 @media (max-width:599px){
+
+  .loader__lockup{ left:calc(50% - 29px); top:calc(50% - 29px); }
+
   .loader__mark{ width:58px; height:58px; }
+
 }
-@keyframes spin{ to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+@keyframes spin{ to{ transform:rotate(360deg); } }
+
+
 
 /* ---------- Brand lockup ---------- */
-.brand{ display:inline-flex; align-items:center; gap:12px; }
-.brand__mark{ width:30px; height:30px; color:var(--emerald); flex:none; }
-.brand__mark img, .brand__mark svg{ width:100%; height:100%; }
-.brand__word{
-  font-family:var(--f-display); font-weight:700; font-size:1.12rem;
-  letter-spacing:.12em; color:var(--emerald);
-}
 
+.brand{ display:inline-flex; align-items:center; gap:12px; }
+
+.brand__mark{ width:30px; height:30px; color:var(--emerald); flex:none; }
+
+.brand__mark img, .brand__mark svg{ width:100%; height:100%; }
+
+.brand__word{
+
+  font-family:var(--f-display); font-weight:700; font-size:1.12rem;
+
+  letter-spacing:.12em; color:var(--emerald);
+
+}
 /* ---------- Nav ---------- */
 .nav{
   position:fixed; top:0; left:0; right:0; z-index:120;
