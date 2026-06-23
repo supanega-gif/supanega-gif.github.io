@@ -152,7 +152,7 @@
   window.addEventListener("load", () => {
     setTimeout(() => {
       if (loader && !loader.classList.contains("is-done")) revealPage();
-    }, 1200);
+    }, 5600);
   });
 
   /* ------------------------------------------------------------------
