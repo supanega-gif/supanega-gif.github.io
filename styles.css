@@ -191,27 +191,67 @@ body.cursor-active a, body.cursor-active button, body.cursor-active [data-cursor
 }
 
 /* ---------- Buttons ---------- */
-.btn{
-  --bg:var(--emerald);
-  display:inline-flex; align-items:center; justify-content:center;
-  font-family:var(--f-display); font-weight:600; font-size:.9rem;
-  letter-spacing:.01em; color:var(--onyx); background:var(--bg);
-  padding:13px 22px; border:1px solid var(--bg); position:relative; overflow:hidden;
-  transition:color .35s var(--ease), background .35s, transform .35s var(--ease);
+.btn {
+  --bg: var(--emerald);
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center;
+  font-family: var(--f-display); 
+  font-weight: 600; 
+  font-size: .9rem;
+  letter-spacing: .01em; 
+  color: var(--onyx); 
+  background: var(--bg);
+  padding: 13px 22px; 
+  border: 1px solid var(--bg); 
+  position: relative; 
+  overflow: hidden;
+  isolation: isolate; /* Prevents overlay from covering text */
+  transition: color .35s var(--ease), background .35s, transform .35s var(--ease);
 }
-.btn span{ position:relative; z-index:1; }
-.btn::before{
-  content:""; position:absolute; inset:0; background:var(--ghost);
-  transform:translateY(101%); transition:transform .4s var(--ease);
+
+.btn span { 
+  position: relative; 
+  z-index: 1; 
 }
-.btn:hover{ color:var(--onyx); }
-.btn:hover::before{ transform:translateY(0); }
-.btn--sm{ padding:9px 16px; font-size:.8rem; }
-.btn--ghost{
-  background:transparent; color:var(--ghost); border-color:var(--line);
+
+.btn::before {
+  content: ""; 
+  position: absolute; 
+  inset: 0; 
+  background: var(--ghost);
+  transform: translateY(101%); 
+  transition: transform .4s var(--ease);
+  z-index: -1; /* Sends slide animation behind the text */
 }
-.btn--ghost::before{ background:var(--emerald); }
-.btn--ghost:hover{ color:var(--onyx); border-color:var(--emerald); }
+
+.btn:hover { 
+  color: var(--onyx); 
+}
+
+.btn:hover::before { 
+  transform: translateY(0); 
+}
+
+.btn--sm { 
+  padding: 9px 16px; 
+  font-size: .8rem; 
+}
+
+.btn--ghost {
+  background: transparent; 
+  color: var(--ghost); 
+  border-color: var(--line);
+}
+
+.btn--ghost::before { 
+  background: var(--emerald); 
+}
+
+.btn--ghost:hover { 
+  color: var(--onyx); 
+  border-color: var(--emerald); 
+}
 
 /* ---------- Shared section frame ---------- */
 .section{
